@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) )
 
 define( 'WC_GATEWAY_BKT_VERSION', '1.0.0' );
 
-function woocommerce_payfast_init() {
+function woocommerce_bkt_init() {
 	
 	if ( ! class_exists( 'WC_Payment_Gateway' ) )
 		return;
@@ -28,7 +28,7 @@ function woocommerce_payfast_init() {
 
 }
 
-add_action( 'plugins_loaded', 'woocommerce_payfast_init', 0 );
+add_action( 'plugins_loaded', 'woocommerce_bkt_init', 0 );
 
 function woocommerce_bkt_add_gateway( $methods ) {
 	$methods[] = 'WC_Gateway_Bkt';
