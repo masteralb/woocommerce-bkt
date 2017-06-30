@@ -1,0 +1,13 @@
+{
+    "name": "newmedia/woocommerce-bkt",
+    "description": "Woocommerce gateway for BKT",
+    "authors": [
+        {
+            "name": "linuxoid",
+            "email": "p.metaj@gmail.com"
+        }
+    ],
+    "require": {
+        "dompdf/dompdf": "^0.8.0"
+    }
+}

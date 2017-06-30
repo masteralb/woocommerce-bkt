@@ -34,3 +34,10 @@ function woocommerce_bkt_add_gateway( $methods ) {
 	$methods[] = 'WC_Gateway_Bkt';
 	return $methods;
 }
+
+add_action( 'init', function(){
+	if ( isset( $_GET['invoice'] ) ){
+		require_once( plugin_basename( 'includes/pdf-invoice.php' ) );
+		exit;
+	}
+});

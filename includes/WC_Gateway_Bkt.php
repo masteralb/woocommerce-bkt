@@ -417,9 +417,48 @@ class WC_Gateway_Bkt extends WC_Payment_Gateway {
 				'default' => 'https://payfortestbkt.cordisnetwork.com/Mpi/Default.aspx',
 			),
 
-			
+			'business_name' => array(
+				'title'   => __( 'Business Name', 'woocommerce-bkt' ),
+				'type'    => 'text',
+				'description'   => __( 'Will be displayed at invoice header', 'woocommerce-bkt' ),
+				'default' => get_bloginfo( 'name' ),
+			),
 
-			
+			'business_nipt' => array(
+				'title'   => __( 'Business NIPT ( Tax ID Number )', 'woocommerce-bkt' ),
+				'type'    => 'text',
+				'description'   => __( 'Will be displayed at invoice header', 'woocommerce-bkt' ),
+				'default' => '',
+			),
+
+			'business_address' => array(
+				'title'   => __( 'Business Address', 'woocommerce-bkt' ),
+				'type'    => 'text',
+				'description'   => __( 'Will be displayed at invoice header', 'woocommerce-bkt' ),
+				'default' => '',
+			),
+
+			'support_phone_number' => array(
+				'title'   => __( 'Support phone number', 'woocommerce-bkt' ),
+				'type'    => 'text',
+				'description'   => __( 'Will be displayed at invoice footer', 'woocommerce-bkt' ),
+				'default' => '',
+			),
+
+			'support_email_address' => array(
+				'title'   => __( 'Support email address', 'woocommerce-bkt' ),
+				'type'    => 'text',
+				'description'   => __( 'Will be displayed at invoice footer', 'woocommerce-bkt' ),
+				'default' => '',
+			),
+
+			'footer_notes' => array(
+				'title'   => __( 'Footer Notes', 'woocommerce-bkt' ),
+				'type'    => 'textarea',
+				'description'   => __( 'Will be displayed at invoice footer', 'woocommerce-bkt' ),
+				'default' => '',
+				'css' => 'width: 800px; height: 180px;'
+			)
 		);
 	}
 
