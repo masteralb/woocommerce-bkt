@@ -2,48 +2,54 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Invoice</title>
+	<title><?php _e( 'Invoice', 'woocommerce-bkt' ); ?></title>
 	<style type="text/css">		
+		
 		body{
 			font-family: Verdana, Arial, Helvetica;
 		}
+
 		table{
 			border-collapse: collapse;
 			max-width: 800px;
 			width: 100%;
 		}
+
 		td, th{
 			padding: 3px 10px;
 			text-align: left;
 			font-weight: normal;
 			font-size: 12px;
 		}
+
 		.heading{
 			font-weight: bold;
 			border-bottom: 1px solid black;
 		}
+
 		.has-borders td, .has-borders th{
 			border: 1px solid #dedede;
 		}
+
 		.invoice-heading td{
 			font-weight: bold;
 		}
+
 		.footer-notes{
 			font-size: 11px;
 		}
+
 		.invoice-number span{
 			background: #dedede;
 			padding: 0 10px;
 		}
+
 	</style>
 </head>
 <body>
 
 <?php 
-global $wpdb;
-
-// Get order
-$order_id 	= intval( $_GET['order_id'] );
+global $wpdb, $order_id;
 $order 		= wc_get_order( $order_id );
 
 // Get the payment gateway
@@ -85,13 +91,13 @@ $support_number		= $settings->support_email_address;
 			<td><?php echo $business_name; ?></td>
 		</tr>
 		<tr>
-			<td>Nipt: <?php echo $nipt_number; ?></td>
+			<td><?php _e( 'Nipt', 'woocommerce-bkt' ); ?>: <?php echo $nipt_number; ?></td>
 		</tr>
 		<tr>
-			<td>Address: <?php echo $business_address; ?></td>
+			<td><?php _e( 'Address', 'woocommerce-bkt' ); ?>: <?php echo $business_address; ?></td>
 		</tr>		
 		<tr>
-			<td>Support: <?php echo $support_email; ?> / <?php echo $support_number; ?></td>
+			<td><?php _e( 'Support', 'woocommerce-bkt' ); ?>: <?php echo $support_email; ?> / <?php echo $support_number; ?></td>
 		</tr>
 		<tr>
 			<td class="invoice-number">Invoice: 

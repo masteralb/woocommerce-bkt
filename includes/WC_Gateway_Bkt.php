@@ -1,16 +1,20 @@
 <?php
+
+use Dompdf\Dompdf;
+
 class WC_Gateway_Bkt extends WC_Payment_Gateway {
 
 	
 	public $version;
 	protected $data_to_send = array();
 
+	const NONCE_SALT = 'r21T-Q[K2H+wfRHY*bmb';
 	
 	public function __construct() {
 		
 		$this->version 		= WC_GATEWAY_BKT_VERSION;
 		$this->id 			= 'bkt';
-		$this->method_title	= __( 'BKT ( Banka Kombetare Tregetare )', 'woocommerce-bkt' );
+		$this->method_title	= __( 'Credit Card, BKT ( Banka Kombetare Tregetare )', 'woocommerce-bkt' );
 
 		$this->method_description = sprintf( 
 			__( 'BKT Gateway works by sending the user to %1$sBKT%2$s to enter their payment information.', 'woocommerce-bkt' ), 
@@ -55,6 +59,47 @@ class WC_Gateway_Bkt extends WC_Payment_Gateway {
 		add_action( 'woocommerce_api_wc_gateway_bkt', array( $this, 'check_bank_response' ) );
 		add_action( 'woocommerce_receipt_bkt', array( $this, 'receipt_page' ) );
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
+
+		add_filter( 'woocommerce_email_attachments', array( $this, 'attach_invoice_pdf_to_email') , 300 , 3 );
+	}
+
+
+	public function attach_invoice_pdf_to_email( $attachments, $type, $object ) {
+
+		if ( 'customer_processing_order' == $type && $object && method_exists( $object, 'get_order_number') ) {
+		    $invoice_path = $this->save_invoice( $object->get_order_number() );
+			$attachments[] = $invoice_path;
+		}
+
+	    return $attachments;
+
+	}
+
+	public function save_invoice( $id ){
+		
+		global $order_id;
+		$order_id = $id;
+
+		$dompdf = new Dompdf();
+		
+		ob_start();
+		require_once( plugin_dir_path(__FILE__) . '/pdf-invoice.php' );
+		$html = ob_get_clean();
+		
+		$dompdf->loadHtml( $html );
+		$dompdf->setPaper('A4', 'portrait');
+		$dompdf->render();
+		$output = $dompdf->output();
+
+		$invoice_salt 	= ( defined( 'NONCE_SALT' ) ) ? NONCE_SALT : self::NONCE_SALT;
+		$filename 		= sprintf( '%s/uploads/bkt_invoice/invoice_%s.pdf', WP_CONTENT_DIR, sha1( $order_id . $invoice_salt ) );
+		
+		if ( file_exists( $filename ) )
+			return $filename;
+
+		file_put_contents( $filename, $output );
+		return $filename;
+		
 	}
 
 	public static function bkt_response_codes( $code = false ){
@@ -216,7 +261,6 @@ class WC_Gateway_Bkt extends WC_Payment_Gateway {
 		$redirect_url   = home_url( '/' );
 
 		$order_id       = absint( $data['order_id'] );
-		$order_key      = wc_clean( $session_id );
 		$order          = wc_get_order( $order_id );
 
 		if ( !$order || false === $data ){
@@ -263,6 +307,7 @@ class WC_Gateway_Bkt extends WC_Payment_Gateway {
 	}
 
 	public function init_form_fields() {
+		
 		$this->form_fields = array(
 			
 			'enabled' => array(

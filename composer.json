@@ -1,6 +1,6 @@
 {
     "name": "newmedia/woocommerce-bkt",
-    "description": "Woocommerce gateway for BKT",
+    "description": "BKT ( Banka Kombetare Tregetare ) payment gateway for woocommerce",
     "authors": [
         {
             "name": "linuxoid",

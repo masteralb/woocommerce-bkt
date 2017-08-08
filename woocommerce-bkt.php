@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name:     Woocommerce BKT
- * Plugin URI:      http://newmedia.al
- * Description:     Process woocommerce payments with BKT Bank
+ * Plugin URI:      http://masteralb.com
+ * Description:     BKT ( Banka Kombetare Tregetare ) payment gateway for woocommerce
  * Author:          Linuxoid ( p.metaj@gmail.com )
- * Author URI:      http://newmedia.al
+ * Author URI:      http://masteralb.com
  * Text Domain:     woocommerce-bkt
  * Domain Path:     /languages
  * Version:         1.0.0
@@ -14,6 +14,8 @@
 
 if ( ! defined( 'ABSPATH' ) )
 	exit;
+
+require_once( plugin_basename( 'vendor/autoload.php' ) ); 
 
 define( 'WC_GATEWAY_BKT_VERSION', '1.0.0' );
 
@@ -34,10 +36,3 @@ function woocommerce_bkt_add_gateway( $methods ) {
 	$methods[] = 'WC_Gateway_Bkt';
 	return $methods;
 }
-
-add_action( 'init', function(){
-	if ( isset( $_GET['invoice'] ) ){
-		require_once( plugin_basename( 'includes/pdf-invoice.php' ) );
-		exit;
-	}
-});
