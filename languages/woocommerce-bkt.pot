@@ -1,0 +1,800 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Woocommerce BKT\n"
+"POT-Creation-Date: 2017-08-08 17:13+0200\n"
+"PO-Revision-Date: 2017-08-08 17:12+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: woocommerce-bkt.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/WC_Gateway_Bkt.php:17
+msgid "Credit Card, BKT ( Banka Kombetare Tregetare )"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:20
+#, php-format
+msgid ""
+"BKT Gateway works by sending the user to %1$sBKT%2$s to enter their payment "
+"information."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:108
+msgid "Approved"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:109
+msgid "Refer to card issuer"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:110
+msgid "Refer to card issuer (Special Conditio,n)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:111
+msgid "Invalid mercha,nt or service provider"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:112
+msgid "Pick-up card"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:113
+msgid "Not Approved"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:114
+msgid "File Update Error"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:115
+msgid "Pick up card (Special Condition)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:116
+msgid "Examine Identity"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:117
+msgid "Try again"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:118
+msgid "Approved (VIP)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:119
+msgid "Invalid Transaction"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:120
+msgid "Invalid amount"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:121
+msgid "Invalid Account Number"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:122
+msgid "No Such Issuer"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:123
+msgid "Unable to locate record on file"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:124
+msgid "Original is Denied"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:125
+msgid "Original not found"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:126
+msgid "Format error (switch generated)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:127
+msgid "Expired card, pick-up"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:128
+msgid "Restricted card, pick-up"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:129
+msgid "Allowable PIN tries ,exceeded"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:130
+msgid "Lost card, Pick-up"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:131
+msgid "Stolen card, pick-up,"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:132
+msgid "Insufficient funds"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:133
+msgid "No checking account"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:134
+msgid "No savings acc,ount"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:135
+msgid "Expired card"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:136
+msgid "Incorrect PIN"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:137
+msgid "Unsupported Card"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:138
+msgid "Transaction not permitted to card"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:139
+msgid "POS doesn't have permission for this transaction"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:140
+msgid "Exceeds withdrawal amount limit"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:141
+msgid "Restricted card"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:142
+msgid "Security violation"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:143
+msgid "Cash Limit Exceeded"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:144
+msgid "Allowable number of PIN tries exceed"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:145
+msgid "Key synchronization error"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:146
+msgid "Decline of Request, No script"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:147
+msgid "Unsafe PIN"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:148
+msgid "ARQC failed"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:149
+msgid "Device Version Incompatible"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:150
+msgid "Approval of request (for PIN man)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:151
+msgid "Issuer or switch is inoperative"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:152
+msgid "Financial institution unknown"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:153
+msgid "POS Negotiation Error"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:154
+msgid "System malfunction"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:155
+msgid "Duplicate Reversal"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:164
+msgid "Bonus amount can not be greater than order amount"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:165
+msgid "Currency Code Is Invalid"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:166
+msgid "Currency Code Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:167
+msgid "Zero or empty amount or wrong."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:168
+msgid "Cvv2 must be represent but it is empty now."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:169
+msgid "Expiry Date Is Missing Or Wrong Length Must be 4 characters."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:170
+msgid "Fail Url Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:171
+msgid "Pan Is Missing Or Invalid Length Of Pan.Must be 13 >= Pan <= 19"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:172
+msgid "Password match not succeed please confirm your password: {0}"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:173
+msgid "Ok Url Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:174
+msgid "Pareq could not prepared."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:175
+msgid "Purchase Amount Is Missing Or Wrong Length"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:176
+msgid "Mbr Id is missing."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:177
+msgid "Unknown Secure Type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:178
+msgid "Unknown Txn Type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:179
+msgid "User Code Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:180
+msgid "User Pass Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:181
+msgid "Wrong Cvv2 {0}"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:182
+msgid "Purchase amount must be 0,01-200.000"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:183
+msgid "Can not make hire-purchase to using full bonus transactions."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:184
+msgid "Invalid securetype for this transaction type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:185
+msgid ""
+"Original transaction order id can not be emtpy for this transaction type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:186
+msgid ""
+"Original transaction order id must not be sent for this transaction type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:187
+msgid "Merchant Id Is Missing"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:188
+msgid "{0} column wrong length Request : {1} Actual : {2}"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:189
+msgid "Wrong secure type for this txn type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:190
+msgid "Record not found which you're looking for"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:191
+msgid "Order id can not be emtpy for this transaction type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:192 includes/WC_Gateway_Bkt.php:200
+msgid "HASH mismatch"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:193
+msgid "OkURL must be maximum 200 characters"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:194
+msgid "Invalid card number"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:195
+msgid "Plugin Not Found"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:196
+msgid "Request form can not be empty"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:197
+msgid "Error during Mpi Post"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:198
+msgid "Max Amount Error"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:199
+msgid "Error during report request"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:201
+msgid "Merchant Find Error"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:202
+msgid "Could not connect to DS or Resolve Error {0}"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:203
+msgid "System Closed"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:204
+msgid "User could not be verified"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:205
+msgid "Unknown Card Type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:206
+msgid "User is not permitted for this transaction type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:207
+msgid "Terminal is not active"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:208
+msgid "Merchant could not be found"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:209
+msgid "Merchant is not active"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:210
+msgid "Terminal is not authorized for this type of transaction"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:211
+msgid "Transaction type is not permitted for this terminal"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:212
+msgid "Pareq Error {0}"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:267
+msgid "Bad access of page"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:273
+msgid "3D User Authentication Failed"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:277 includes/WC_Gateway_Bkt.php:278
+msgid "Payment completed"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:314
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:315
+msgid "Enable BKT"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:317
+msgid ""
+"This controls whether or not this gateway is enabled within WooCommerce."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:323
+msgid "Title"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:325
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:326
+msgid "BKT"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:331
+msgid "Description"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:333
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:339
+msgid "BKT Sandbox"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:341
+msgid "Place the payment gateway in development mode."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:346
+msgid "Language"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:348
+msgid "User Language information. (Turkish: TR, English: EN)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:354
+msgid "Member ID"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:356
+msgid "This is the member ID, received from BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:361
+msgid "Merchant ID"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:363
+msgid "This is the merchant ID, received from BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:368
+msgid "Merchant Password"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:370
+msgid "This is the merchant password, received from BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:375
+msgid "User code"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:377
+msgid "This is the user code, received from BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:382 includes/WC_Gateway_Bkt.php:389
+msgid "User password"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:384 includes/WC_Gateway_Bkt.php:391
+msgid "This is the user password, received from BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:396
+msgid "Secure type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:398
+msgid ""
+"Represents the Security type of the transaction. ( NonSecure, 3Dpay, "
+"3DModel, 3DHost )"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:403
+msgid "Translation type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:405
+msgid ""
+"Transaction type. “Auth” should be sent for provision. ( Sales:Auth, "
+"PreAuthorization:PreAuth, PreAuthorizationClosing:PostAuth, Refund, Void, "
+"PointInquiry, OrderInquiry:OrderInq, BatchClose)"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:410
+msgid "Installment count"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:412
+msgid ""
+"Represents the number of installments. This number should be greater than 1 "
+"if this transaction is to be accepted as a transaction with installment. If "
+"this is a number smaller than 0 or a non-numeric symbol, this number is "
+"returned as 0"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:417
+msgid "Currency"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:419
+msgid "949 = TL, 840 = USD, 978 = EUR, 8 = ALL"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:424
+msgid "Send Debug Emails"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:426
+msgid ""
+"Send debug e-mails for transactions through the BKT gateway (sends on "
+"successful transaction as well)."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:431
+msgid "Who Receives Debug E-mails?"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:433
+msgid ""
+"The e-mail address to which debugging error e-mails are sent when in test "
+"mode."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:438
+msgid "Enable Logging"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:440
+msgid "Enable transaction logging for gateway."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:445
+msgid "Template type"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:447
+msgid "Template related with Billing and Shipping"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:452
+msgid "Payment post url"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:454
+msgid "Post url"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:459
+msgid "Order inquiry url"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:461
+msgid "Inquiry url"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:466
+msgid "Business Name"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:468 includes/WC_Gateway_Bkt.php:475
+#: includes/WC_Gateway_Bkt.php:482
+msgid "Will be displayed at invoice header"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:473
+msgid "Business NIPT ( Tax ID Number )"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:480
+msgid "Business Address"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:487
+msgid "Support phone number"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:489 includes/WC_Gateway_Bkt.php:496
+#: includes/WC_Gateway_Bkt.php:503
+msgid "Will be displayed at invoice footer"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:494
+msgid "Support email address"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:501
+msgid "Footer Notes"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:524
+msgid ""
+"Thank you for your order, please click the button below to pay with BKT."
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:604
+#, php-format
+msgid "New order from %s"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:619
+msgid "Pay via BKT"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:620
+msgid "Cancel order &amp; restore cart"
+msgstr ""
+
+#: includes/WC_Gateway_Bkt.php:625
+msgid ""
+"Thank you for your order. We are now redirecting you to BKT to make payment."
+msgstr ""
+
+#: includes/pdf-invoice.php:5
+msgid "Invoice"
+msgstr ""
+
+#: includes/pdf-invoice.php:94
+msgid "Nipt"
+msgstr ""
+
+#: includes/pdf-invoice.php:97
+msgid "Address"
+msgstr ""
+
+#: includes/pdf-invoice.php:100
+msgid "Support"
+msgstr ""
+
+#: includes/pdf-invoice.php:113
+msgid "Order Items"
+msgstr ""
+
+#: includes/pdf-invoice.php:116
+msgid "Item"
+msgstr ""
+
+#: includes/pdf-invoice.php:117
+msgid "Cost"
+msgstr ""
+
+#: includes/pdf-invoice.php:118
+msgid "Qty"
+msgstr ""
+
+#: includes/pdf-invoice.php:119 includes/pdf-invoice.php:273
+msgid "Total"
+msgstr ""
+
+#: includes/pdf-invoice.php:124 includes/pdf-invoice.php:125
+msgid "Tax"
+msgstr ""
+
+#: includes/pdf-invoice.php:126
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: includes/pdf-invoice.php:147
+msgid "SKU: "
+msgstr ""
+
+#: includes/pdf-invoice.php:152
+msgid "variation: "
+msgstr ""
+
+#: includes/pdf-invoice.php:156
+#, php-format
+msgid "%s (No longer exists)"
+msgstr ""
+
+#: includes/pdf-invoice.php:228 includes/pdf-invoice.php:235
+msgid "Shipping"
+msgstr ""
+
+#: includes/pdf-invoice.php:276
+msgid "Discount:"
+msgstr ""
+
+#: includes/pdf-invoice.php:282
+msgid "Shipping:"
+msgstr ""
+
+#: includes/pdf-invoice.php:309
+msgid "Order total"
+msgstr ""
+
+#: includes/pdf-invoice.php:320
+msgid "Payment Details"
+msgstr ""
+
+#: includes/pdf-invoice.php:326
+msgid "Status"
+msgstr ""
+
+#: includes/pdf-invoice.php:330
+msgid "Transaction id"
+msgstr ""
+
+#: includes/pdf-invoice.php:334
+msgid "Card type"
+msgstr ""
+
+#: includes/pdf-invoice.php:338
+msgid "Card"
+msgstr ""
+
+#: includes/pdf-invoice.php:342
+msgid "Transaction date"
+msgstr ""
+
+#: includes/pdf-invoice.php:354
+msgid "Customer contact details"
+msgstr ""
+
+#: includes/pdf-invoice.php:360
+msgid "Phone"
+msgstr ""
+
+#: includes/pdf-invoice.php:364
+msgid "Email"
+msgstr ""
+
+#: includes/pdf-invoice.php:375
+msgid "Billing/Shipping"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Woocommerce BKT"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "http://masteralb.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "BKT ( Banka Kombetare Tregetare ) payment gateway for woocommerce"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Linuxoid ( p.metaj@gmail.com )"
+msgstr ""
