@@ -1,7 +1,7 @@
 module.exports = function( grunt ) {
 
 	'use strict';
-	var banner = '/**\n * <%= pkg.homepage %>\n * Copyright (c) <%= grunt.template.today("yyyy") %>\n * This file is generated automatically. Do not edit.\n */\n';
+
 	// Project configuration
 	grunt.initConfig( {
 
@@ -11,10 +11,11 @@ module.exports = function( grunt ) {
 			options: {
 				textdomain: 'woocommerce-bkt',
 			},
-			target: {
-				files: {
-					src: [ '*.php', '**/*.php', '!node_modules/**', '!php-tests/**', '!bin/**' ]
-				}
+			update_all_domains: {
+				options: {
+					updateDomains: true
+				},
+				src: [ '*.php', '**/*.php', '!\.git/**/*', '!bin/**/*', '!node_modules/**/*', '!tests/**/*' ]
 			}
 		},
 
@@ -30,6 +31,7 @@ module.exports = function( grunt ) {
 			target: {
 				options: {
 					domainPath: '/languages',
+					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
 					mainFile: 'woocommerce-bkt.php',
 					potFilename: 'woocommerce-bkt.pot',
 					potHeaders: {
@@ -45,6 +47,7 @@ module.exports = function( grunt ) {
 
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
+	grunt.registerTask( 'default', [ 'i18n','readme' ] );
 	grunt.registerTask( 'i18n', ['addtextdomain', 'makepot'] );
 	grunt.registerTask( 'readme', ['wp_readme_to_markdown'] );
 

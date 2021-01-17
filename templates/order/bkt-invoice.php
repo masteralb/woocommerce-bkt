@@ -49,11 +49,8 @@
 <body>
 
 <?php 
-global $wpdb, $order_id;
-$order 		= wc_get_order( $order_id );
-
-// Get the payment gateway
-$payment_gateway = wc_get_payment_gateway_by_order( $order );
+// Template params: $order, $order_id, $settings;
+global $wpdb;
 
 // Get line items
 $line_items          = $order->get_items( apply_filters( 'woocommerce_admin_order_item_types', 'line_item' ) );
@@ -74,15 +71,12 @@ $_bkt_transaction_card_type = get_post_meta( $order_id, '_bkt_transaction_card_t
 $_bkt_card_mask 			= get_post_meta( $order_id, '_bkt_card_mask', true );
 $_bkt_transaction_dat 		= get_post_meta( $order_id, '_bkt_transaction_date', true );
 
-// Get gateway settings
-$settings 	= (object) get_option( 'woocommerce_bkt_settings' , false );
-
-$business_name 		= $settings->business_name;
-$nipt_number 		= $settings->business_nipt;
-$business_address 	= $settings->business_address;
+$business_name 		= $settings->business_name ?? '';
+$nipt_number 		= $settings->business_nipt ?? '';
+$business_address 	= $settings->business_address ?? '';
 $invoice_number		= '#'.$order_id;
-$support_email		= $settings->support_phone_number;
-$support_number		= $settings->support_email_address;
+$support_email		= $settings->support_phone_number ?? '';
+$support_number		= $settings->support_email_address ?? '';
 ?>
 <table>
 	
@@ -113,17 +107,17 @@ $support_number		= $settings->support_email_address;
 			<td colspan="5" class="heading"><?php _e( 'Order Items', 'woocommerce-bkt' ); ?></td>
 		</tr>
 		<tr class="has-borders">
-			<td><?php _e( 'Item', 'woocommerce' ); ?></td>
-			<td><?php _e( 'Cost', 'woocommerce' ); ?></td>
-			<td><?php _e( 'Qty', 'woocommerce' ); ?></td>
-			<td><?php _e( 'Total', 'woocommerce' ); ?></td>
+			<td><?php _e( 'Item', 'woocommerce-bkt' ); ?></td>
+			<td><?php _e( 'Cost', 'woocommerce-bkt' ); ?></td>
+			<td><?php _e( 'Qty', 'woocommerce-bkt' ); ?></td>
+			<td><?php _e( 'Total', 'woocommerce-bkt' ); ?></td>
 			<?php
 			if ( ! empty( $order_taxes ) ) :
 				foreach ( $order_taxes as $tax_id => $tax_item ) :
 					$tax_class      = wc_get_tax_class_by_tax_id( $tax_item['rate_id'] );
-					$tax_class_name = isset( $classes_options[ $tax_class ] ) ? $classes_options[ $tax_class ] : __( 'Tax', 'woocommerce' );
-					$column_label   = ! empty( $tax_item['label'] ) ? $tax_item['label'] : __( 'Tax', 'woocommerce' );
-					$column_tip     = sprintf( esc_html__( '%1$s (%2$s)', 'woocommerce' ), $tax_item['name'], $tax_class_name );
+					$tax_class_name = isset( $classes_options[ $tax_class ] ) ? $classes_options[ $tax_class ] : __( 'Tax', 'woocommerce-bkt' );
+					$column_label   = ! empty( $tax_item['label'] ) ? $tax_item['label'] : __( 'Tax', 'woocommerce-bkt' );
+					$column_tip     = sprintf( esc_html__( '%1$s (%2$s)', 'woocommerce-bkt' ), $tax_item['name'], $tax_class_name );
 					?>
 					<td>
 					<?php echo esc_attr( $column_label ); ?>
@@ -144,16 +138,16 @@ $support_number		= $settings->support_email_address;
 				echo esc_html( $item->get_name()) . '<br/>'; 
 
 				if ( $product && $product->get_sku() ) {
-					echo  __( 'SKU: ', 'woocommerce' ) . esc_html( $product->get_sku() ) . ', ';
+					echo  __( 'SKU: ', 'woocommerce-bkt' ) . esc_html( $product->get_sku() ) . ', ';
 				}
 
 				if ( $item->get_variation_id() ) {
 					
-					echo __( 'variation: ', 'woocommerce' );
+					echo __( 'variation: ', 'woocommerce-bkt' );
 					if ( 'product_variation' === get_post_type( $item->get_variation_id() ) ) {
 						echo esc_html( $item->get_variation_id() );
 					} else {
-						printf( esc_html__( '%s (No longer exists)', 'woocommerce' ), $item->get_variation_id() );
+						printf( esc_html__( '%s (No longer exists)', 'woocommerce-bkt' ), $item->get_variation_id() );
 					}
 				}?>
 			</td>
@@ -225,14 +219,14 @@ $support_number		= $settings->support_email_address;
 	<tbody>
 		<tr><td colspan="5">&nbsp;</td></tr>
 		<tr>
-			<td colspan="5" class="heading"><?php _e( 'Shipping', 'woocommerce' ) ?></td>
+			<td colspan="5" class="heading"><?php _e( 'Shipping', 'woocommerce-bkt' ) ?></td>
 		</tr>
 		<?php 
 		$shipping_methods = WC()->shipping() ? WC()->shipping->load_shipping_methods() : array();
 		foreach ( $line_items_shipping as $item_id => $item ): ?>
 			<tr class="has-borders">
 				<td colspan="3">
-						<?php echo esc_html( $item->get_name() ? $item->get_name() : __( 'Shipping', 'woocommerce' ) ); ?>
+						<?php echo esc_html( $item->get_name() ? $item->get_name() : __( 'Shipping', 'woocommerce-bkt' ) ); ?>
 				</td>
 				<td width="1%">
 					<?php
@@ -270,16 +264,16 @@ $support_number		= $settings->support_email_address;
 	<tbody>
 		<tr><td colspan="5">&nbsp;</td></tr>
 		<tr>
-			<td colspan="5" class="heading"><?php _e( 'Total' , 'woocommerce' ) ?></td>
+			<td colspan="5" class="heading"><?php _e( 'Total' , 'woocommerce-bkt' ) ?></td>
 		</tr>
 		<tr class="has-borders">
-			<td colspan="3" class="text-right"><?php _e( 'Discount:', 'woocommerce' ); ?></td>
+			<td colspan="3" class="text-right"><?php _e( 'Discount:', 'woocommerce-bkt' ); ?></td>
 			<td colspan="2">
 				<?php echo wc_price( $order->get_total_discount(), array( 'currency' => $order->get_currency() ) ); ?>
 			</td>
 		</tr>
 		<tr class="has-borders">
-			<td colspan="3" class="text-right"><?php _e( 'Shipping:', 'woocommerce' ); ?></td>
+			<td colspan="3" class="text-right"><?php _e( 'Shipping:', 'woocommerce-bkt' ); ?></td>
 			<td colspan="2"><?php
 				if ( ( $refunded = $order->get_total_shipping_refunded() ) > 0 ) {
 				echo '<del>' . strip_tags( wc_price( $order->get_shipping_total(), array( 'currency' => $order->get_currency() ) ) ) . '</del> <ins>' . wc_price( $order->get_shipping_total() - $refunded, array( 'currency' => $order->get_currency() ) ) . '</ins>';
@@ -306,7 +300,7 @@ $support_number		= $settings->support_email_address;
 			<?php endforeach; ?>
 		<?php endif; ?>
 		<tr class="has-borders">
-			<td colspan="3" class="text-right"><strong><?php _e( 'Order total', 'woocommerce' ); ?>:</strong></td>
+			<td colspan="3" class="text-right"><strong><?php _e( 'Order total', 'woocommerce-bkt' ); ?>:</strong></td>
 			<td colspan="2">
 				<strong><?php echo $order->get_formatted_order_total(); ?></strong>
 			</td>
